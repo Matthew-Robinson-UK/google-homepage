@@ -2,31 +2,64 @@
 <style>
   .wrapper {
   position: relative;
+  top:150px;
   display: flex;
-  min-width: 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .search {
   border: 1px solid grey;
-  border-radius: 5px;
-  height: 25px;
-  width: 100%;
+  border-radius: 25px;
+  height: 40px;
+  width: 75%;
   padding: 2px 23px 2px 30px;
   outline: 0;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
 }
-
 .search-icon {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 14px;
+position:absolute;
+top:145px;
+left:100px;
 }
 .search:hover, .search:focus {
-  border: 1px solid #646464;
+  border: 1.9px solid #444444;
   background-color: white
 }
-
+.buttons{
+  margin-top:30px;
+}
+.button{
+  background-color: #f5f5f5;
+  border:none;
+  color:#707070;
+  font-size:15px;
+  padding: 10px 20px;
+  margin:5px;
+  border-radius:4px;
+  outline:none;
+}
+.button:hover{
+  border: 1px solid #c8c8c8;
+  padding: 9px 19px;
+  color:#808080;
+}
+.button:focus{
+  border:1px solid #4885ed;
+  padding: 9px 19px;
+}
+.grid{
+  height:23px;
+  position:relative;
+  bottom:4px;
+}
+.Avatar{
+  height:23px;
+  position:relative;
+  bottom:4px;
+  border-radius:5px;
+}
  ul {
   list-style-type: none;
   margin: 0;
@@ -41,24 +74,66 @@ a {
   color: Black;
   text-decoration: none;
 }
+li a:hover {
+  text-decoration: underline;
+}
+.footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom:-550px;
+}
+.footer li {
+  float: left;
+}
+.footer a {
+  display: block;
+  padding: 8px;
+  color: Black;
+  text-decoration: none;
+}
+.footer li a:hover {
+  text-decoration: underline;
+}
 </style>
   <head>
     <ul>
       <li><a href="About">About</a></li>
       <li><a href="Store">Store</a></li>
+      <li style="float:right"><a href="Avatar"><img class="Avatar" src="https://avatars.githubusercontent.com/u/86956583?v=4"></a></li>
+      <li style="float:right"><a href="#grid"><img class="grid" src="https://cdn3.iconfinder.com/data/icons/navigation-and-settings/24/Material_icons-01-11-512.png" title="Google apps"></a></li>
       <li style="float:right"><a href="Gmail">Gmail</a></li>
       <li style="float:right"><a href="Images">Images</a></li>
     </ul>
   </head>
   <body style="background-color:rgb(255, 255, 255);">
-    <div class="logo">
+
+<div class="wrapper">
+  <div class="logo">
     <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png alt="The Google logo">
     </div>
-<div class="wrapper">
   <img class="search-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
   <input placeholder=""
          type="text" 
          class="search">
+  <div class="buttons">
+    <button class="button" type="button">Google Search</button>
+    <button class="button" type="button">I'm Feeling Lucky</button>
+   </div>
+  </div>
 </div>
   </body>
+  <div class="footer">
+  <footer>
+    <ul>
+      <li><a href="Advertising">Advertising</a></li>
+      <li><a href="Business">Business</a></li>
+      <li><a href="How Search works">How Search Works</a></li>
+      <li style="float:right"><a href="Privacy">Privacy</a></li>
+      <li style="float:right"><a href="Terms">Terms</a></li>
+      <li style="float:right"><a href="Settings">Settings</a></li>
+    </ul>
+  </footer>
+  </div>  
 </html>
